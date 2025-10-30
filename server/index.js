@@ -46,3 +46,6 @@ const messageRoutes = require('./routes/messageRoutes');
 
 app.use(express.json());
 app.use('/api', messageRoutes);
+app.get('/', (req, res) => {
+  res.send('Backend is live!');
+});
