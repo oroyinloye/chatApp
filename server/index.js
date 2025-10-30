@@ -49,3 +49,9 @@ app.use(cors({
   origin: 'http://localhost:3000', // allow requests from React frontend
   methods: ['GET', 'POST'],
 }));
+const express = require('express');
+const app = express();
+const messageRoutes = require('./routes/messageRoutes');
+
+app.use(express.json());
+app.use('/api', messageRoutes);
