@@ -1,6 +1,8 @@
+module.exports = router;
+
 const express = require('express');
 const router = express.Router();
-const Message = require('./models/Message');
+const Message = require('../models/Message');
 
 router.post('/messages', async (req, res) => {
   try {
